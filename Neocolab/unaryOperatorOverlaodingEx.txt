@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class Distance
+{
+public:
+    float miles;
+    Distance()
+    {
+
+    }
+    Distance(float m)
+    {
+        miles=m;
+
+    }
+    float getKm()
+    {
+        return miles*1.06;
+    }
+   Distance operator +()
+    {
+        return *this;
+    }
+
+};
+int main()
+{
+
+    float mm;
+    cin>>mm;
+    Distance d1(mm);
+    Distance d2= +d1;
+    cout<<"Distance in Km:"<<d2.getKm();
+
+
+    return 0;
+}
